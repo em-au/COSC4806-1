@@ -18,6 +18,10 @@
     <h1>Assignment 1</h1>
 
     <p>Welcome, <?=$_SESSION['username']?></p>
+    <?php
+      date_default_timezone_set('America/Toronto');
+      echo "The current date is " . date("l F j, o");
+    ?>
 
   </body>
 
