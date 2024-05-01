@@ -1,8 +1,11 @@
 <?php
-session_start();
+  session_start();
 
-// Check if failed attempt
-// if yes, display it in nice way
+// Check if there have been failed attempts
+// If yes, display the number
+  if (isset($_SESSION['failed_attempts']) >= 1) {
+    echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
+  }
 ?>
 
 <!DOCTYPE html>

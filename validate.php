@@ -20,10 +20,6 @@
     else {
       $_SESSION['failed_attempts']++;
     }
-    // header... redirect to login.php
     header ('location: /login.php');
-    
-    
-    //echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
   }
 ?>
