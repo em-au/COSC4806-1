@@ -1,11 +1,5 @@
 <?php
   session_start();
-
-// Check if there have been failed attempts
-// If yes, display the number
-  if (isset($_SESSION['failed_attempts']) >= 1) {
-    echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
-  }
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +21,20 @@
       <input type="password" id="password" name="password">
       <br><br>
       <input type="submit" value="Submit">
+      <br><br>
     </form>
 
   </body>
+
+  <footer>
+    <?php
+      // Check if there have been failed attempts
+      // If yes, display the number
+      if (isset($_SESSION['failed_attempts']) >= 1) {
+        echo "Unsuccessful attempts: " . $_SESSION['failed_attempts'];
+      }
+    ?>
+  </footer>
 </html>
 
 
