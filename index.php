@@ -1,9 +1,11 @@
 <?php
-session_start();
+  session_start();
 
 // Check if user is authenticated (use session variable authenticated)
-// if yes, nothing
-// If not, redirect to login.php.... use header()
+// If not, redirect to login.php
+  if (isset($_SESSION['authenticated']) != 1) {
+    header ('location: /login.php');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +19,9 @@ session_start();
 
     <p>Welcome, <?=$_SESSION['username']?></p>
 
-    <p><a href="/login.php">Click here to login</a></p>
-    
   </body>
 
   <footer>
-    <p><a href="/logout.php" Click here to logout</p>
-    
+    <p><a href="/logout.php">Click here to logout</p>
   </footer>
 </html>

@@ -21,6 +21,9 @@
       $_SESSION['failed_attempts']++;
     }
     // header... redirect to login.php
-    echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
+    header ('location: /login.php');
+    
+    
+    //echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
   }
 ?>
