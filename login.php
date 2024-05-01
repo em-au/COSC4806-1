@@ -1,5 +1,10 @@
 <?php
   session_start();
+  // Check if user is authenticated (use session variable authenticated)
+  // If yes, redirect to index.php
+  if (isset($_SESSION['authenticated']) == 1) {
+    header ('location: /index.php');
+  }
 ?>
 
 <!DOCTYPE html>
