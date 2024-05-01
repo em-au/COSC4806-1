@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Check if failed attempt
+// if yes, display it in nice way
+?>
+
 <!DOCTYPE html>
 <html>
   <head>

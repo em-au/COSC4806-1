@@ -10,6 +10,7 @@
   $password = $_REQUEST['password'];
 
   if ($valid_username == $username && $valid_password == $password) {
+    $_SESSION['authenticated'] = 1;
     header ('location: /');
   }
   else {
@@ -19,6 +20,7 @@
     else {
       $_SESSION['failed_attempts']++;
     }
+    // header... redirect to login.php
     echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];
   }
 ?>
